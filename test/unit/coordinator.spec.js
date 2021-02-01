@@ -1,7 +1,7 @@
 var expect = require('chai').expect,
     cases = require('cases'),
     Q = require('q'),
-    coordinator = require('../../src/coordinator');
+    coordinator = require('../../build/coordinator');
 
 describe('coordinator', function() {
 

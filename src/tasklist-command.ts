@@ -1,4 +1,4 @@
-module.exports = function(service, server) {
+function tasklistCommand(service?: string, server?: string) {
     var args = [ '/FO', 'CSV', '/NH', '/FI', 'Services eq ' + service ];
     if (server) args.push('/S', server);
     return {
@@ -7,3 +7,7 @@ module.exports = function(service, server) {
         successCodes: []
     };
 }
+
+module.exports = tasklistCommand;
+
+export default tasklistCommand;

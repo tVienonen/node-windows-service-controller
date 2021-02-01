@@ -1,7 +1,7 @@
 var expect = require('chai').expect,
     cases = require('cases'),
     path = require('path'),
-    sc = require('../../src/sc');
+    sc = require('../../build/sc');
 
 var binpath = path.join(__dirname, 'service/bin/Service.exe');
 

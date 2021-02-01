@@ -1,6 +1,6 @@
 var expect = require('chai').expect,
     cases = require('cases'),
-    parse = require('../../src/tasklist-parser');
+    parse = require('../../build/tasklist-parser');
 
 describe('parser', function() {
 

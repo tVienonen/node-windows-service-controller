@@ -1,5 +1,5 @@
 var expect = require('chai').expect,
-    tasklist = require('../../src/tasklist-command');
+    tasklist = require('../../build/tasklist-command');
 
 describe('tasklist-command', function() {
 

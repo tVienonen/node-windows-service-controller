@@ -1,13 +1,17 @@
-# windows-service-controller
+# Node Service Control Manager
 
-[![npm version](http://img.shields.io/npm/v/windows-service-controller.svg?style=flat)](https://npmjs.org/package/windows-service-controller) [![build status](http://img.shields.io/travis/mikeobrien/node-windows-service-controller.svg?style=flat)](https://travis-ci.org/mikeobrien/node-windows-service-controller) [![Dependency Status](http://img.shields.io/david/mikeobrien/node-windows-service-controller.svg?style=flat)](https://david-dm.org/mikeobrien/node-windows-service-controller) [![npm downloads](http://img.shields.io/npm/dm/windows-service-controller.svg?style=flat)](https://npmjs.org/package/windows-service-controller)
+This project has been forked to rewrite it in Typescript. It now has proper type definitions and up-to-date dependencies.
 
-Windows service controller for node. Wraps [sc](http://technet.microsoft.com/en-us/library/bb490995.aspx).
+Project repo: https://github.com/tVienonen/node-windows-service-controller
+
+Credits to: https://github.com/mikeobrien/node-windows-service-controller for the original source code.
+
+Node Service Control Manager. Wraps [sc](http://technet.microsoft.com/en-us/library/bb490995.aspx).
 
 ## Install
 
 ```bash
-$ npm install windows-service-controller --save
+$ npm install node-service-control-manager --save
 ```
 
 ## Usage
@@ -15,7 +19,7 @@ $ npm install windows-service-controller --save
 All commands return a promise. Information returned by the `sc` command, if any, will be parsed and passed when the promise is resolved. The error message from `sc` is also parsed and passed when the promise is rejected. Unless otherwise indicated, the promise is resolved when `sc` exits.
 
 ```js
-var sc = require('windows-service-controller');
+var sc = require('node-service-control-manager');
 
 sc.getDisplayName('SomeService')
     .catch(function(error) { 

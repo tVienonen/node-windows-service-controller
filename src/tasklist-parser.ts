@@ -1,11 +1,8 @@
-var _ = require('lodash'),
-    escapeRegex = require('escape-string-regexp');
+import _ from 'lodash';
 
-_.mixin(require('underscore.string').exports());
-
-module.exports = function(output) {
+function parser(output: string) {
     if (output.match(/INFO: No tasks are running/)) return [];
-    return output.split('\n').map(function(line) {
+    return output.split('\n').map(function(line: string) {
         var fields = line.trim().replace(/^"|"$/g, '').split('","');
         return {
             name: fields[0], 
@@ -16,3 +13,7 @@ module.exports = function(output) {
         }
     });
 };
+
+module.exports = parser;
+
+export default parser;

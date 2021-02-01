@@ -1,6 +1,6 @@
 var expect = require('chai').expect,
     _ = require('lodash'),
-    sc = require('../../src/sc-command');
+    sc = require('../../build/sc-command');
 
 describe('sc-command', function() {
 
@@ -24,7 +24,6 @@ describe('sc-command', function() {
         it('should be valid with minimal args', function() {
 
             var start = sc.start(['servicename']);
-
             expect(start).to.deep.equal(buildControlCommand('start', [
                 buildCommand([ 'start', 'servicename' ], 'servicename', [ 1056 ]) 
             ]));

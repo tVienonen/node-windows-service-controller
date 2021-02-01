@@ -1,6 +1,6 @@
 var expect = require('chai').expect,
     cases = require('cases'),
-    parse = require('../../src/sc-parser');
+    parse = require('../../build/sc-parser');
 
 describe('parser', function() {
 
